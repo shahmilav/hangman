@@ -4,7 +4,6 @@ use std::io::stdin;
 
 const NUM_OF_LANGUAGES: u8 = 6;
 const TOTAL_TRIES: u8 = 6; // Head(1), Body(1), Feet(2), Hands(2)
-
 fn main() {
     let languages = create_map();
 
@@ -19,7 +18,11 @@ fn main() {
     let guess: char = take_guess();
 
     if char_vec.contains(&guess) {
+        // Correct guess
+        // TODO implement correct guess functionality
     } else {
+        // Incorrect guess
+        // TODO implement incorrect guess functionality
     }
 }
 
@@ -40,7 +43,10 @@ fn create_map() -> HashMap<String, String> {
         "KOTLIN".to_owned(),
         "println(\"Hello, world!\");".to_owned(),
     );
-    languages.insert("HTML".to_owned(), "<h1>Hello world!</h1>".to_owned());
+    languages.insert("HTML".to_owned(), "<h1>Hello world!</h1>".to_owned()); // we have an imposter among us
+
+    // TODO add more languages
+    // Swift, C, Go, Ruby, etc.
 
     languages
 }
